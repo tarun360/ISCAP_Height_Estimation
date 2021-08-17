@@ -1,7 +1,7 @@
 # MAIN_ROOT=/home/zhb502/w2020/espnet
 
 # change your espnet location
-MAIN_ROOT=/home3/theanhtran/097espnet
+MAIN_ROOT=/notebooks/ISCAP/espnet
 KALDI_ROOT=$MAIN_ROOT/tools/kaldi
 
 export PATH=$PWD/utils/:$KALDI_ROOT/tools/openfst/bin:$PATH

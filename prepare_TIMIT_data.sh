@@ -6,7 +6,7 @@
 . ./path.sh
 . ./cmd.sh
 # We can control the program flow by changing start and stop stage
-stage=3                 # start stage
+stage=0                 # start stage
 stop_stage=3            # stop stage
 # Raw TIMIT dataset location. If TIMIT dataset is available on your computer, you can change raw_data to your dataset location
 timit=`pwd`/data/lisa/data/timit/raw/TIMIT         # Raw TIMIT data directory (after extracted from .zip file)

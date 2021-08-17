@@ -52,7 +52,7 @@ if __name__ == '__main__':
     trainer = Trainer(
         max_epochs=params['max_epochs'],
         logger=csv_logger,               # Logging all the losses, epochs and steps
-        gpus= 0,                         # You may change the number of GPUs as per availability 
+        gpus= 1,                         # You may change the number of GPUs as per availability 
         # row_log_interval=1,
         progress_bar_refresh_rate=2,   # Number of Epochs after progress is shown regularly
         callbacks=[EarlyStopping(monitor='val_loss', patience= params['early_stop_patience'], mode='min')],  # Early Stopping Callback
@@ -61,7 +61,7 @@ if __name__ == '__main__':
 
     dm = Data_Module_height_triplet_mse(
         seq_len = params['seq_len'],
-        batch_size = params['batch_size'], num_workers=4,     # Number of workers for Train_Data_Loader
+        batch_size = params['batch_size'], num_workers=8,     # Number of workers for Train_Data_Loader
     )
     ###################################################################################################
     # 3. SELECT THE MODEL TO USE
